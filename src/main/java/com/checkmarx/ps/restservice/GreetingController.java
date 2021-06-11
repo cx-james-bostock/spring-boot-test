@@ -25,7 +25,9 @@ public class GreetingController {
 		(rs, rowNum) -> new Greeting(rs.getLong("id"), rs.getString("content")),
 		name);
 	if (greetingList.size() == 1) {
-	    return greetingList.get(0);
+	    Greeting greeting = greetingList.get(0);
+	    log.info(String.format("greeting: content is %s", greeting.getContent()));
+	    return greeting;
 	} else if (greetingList.size() == 0) {
 	    // Note that, by default, the message is not added to the response
 	    // See https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.3-Release-Notes#changes-to-the-default-error-pages-content
