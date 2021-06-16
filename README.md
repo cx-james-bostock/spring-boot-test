@@ -7,6 +7,8 @@ vulnerabilities detected by CxSAST.
 
 The following vulnerabilities are detected by CxSAST.
 
+## Heap_Inspection
+
 ## Improper_Resource_Access_Authority
 
 ## Log_Forging
