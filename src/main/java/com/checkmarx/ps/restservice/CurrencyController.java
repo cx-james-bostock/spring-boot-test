@@ -8,16 +8,16 @@ import java.util.List;
 
 @RestController
 public class CurrencyController {
-    private CurrencyDataRepository currencyDataRepository;
+    private CurrencyService currencyService;
 
     @GetMapping("/currency")
     public CurrencyDetails getCurrencyDetails() {
-	List<CurrencyDetails> currencyDetailsList = currencyDataRepository.getCurrencyDetails();
+	List<CurrencyDetails> currencyDetailsList = currencyService.getCurrencyDetails();
 	return currencyDetailsList.get(0);
     }
 
     @Autowired
-    public void setCurrencyDataRepository(CurrencyDataRepository currencyDataRepository) {
-	this.currencyDataRepository = currencyDataRepository;
+    public void setCurrencyDataRepository(CurrencyService currencyService) {
+	this.currencyService = currencyService;
     }
 }
