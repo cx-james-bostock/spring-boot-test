@@ -17,7 +17,7 @@ public class CurrencyController {
     }
 
     @Autowired
-    public void setCurrencyDataRepository(CurrencyService currencyService) {
+    public void setCurrencyService(CurrencyService currencyService) {
 	this.currencyService = currencyService;
     }
 }
